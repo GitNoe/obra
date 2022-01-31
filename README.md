@@ -10,6 +10,6 @@
 5. Unha vez iniciada a base de datos e as dependencias do proxecto, comezamos a construir o esquelete de programación da app:
    - Primeiro é imprescindible un php de conexión coa base de datos "obra", seguido dun formulario de login onde se identifican os usuarios e iníciase a sesión.
    - No index.php incluimos un 'require' á conexion.php, un pequeno formulario de búsqueda por nome e unha parte con html para a saída dos datos da base "persoas" por pantalla.
-   - Se o login funciona cos usuarios creados, obtemos unha pantalla na que podemos incluir novas "persoas" cun formulario no que os campos a cubrir corresponden coas columnas da      táboa "persoas" (nuevo.php).
-   - Ademais, créanse os arquivos php coas funcións de gardar, modificar, eliminar e actualizar rexistros de persoas, adaptados sempre aos campos da táboa.
-6. 
+   - Se o futuro login funciona cos usuarios creados, obtemos unha pantalla na que podemos incluir novas "persoas" cun formulario no que os campos a cubrir corresponden coas columnas da táboa "persoas" (nuevo.php).
+   - Ademais, créanse os respetivos arquivos php coas funcións de gardar, modificar, eliminar e actualizar rexistros de persoas, adaptados sempre aos campos da táboa.
+6. En canto ao login inicial polo que acceden os usuarios (traballadores de SOL), fíxose mediante a creación de dous arquivos: conexion.php (á base de datos "obra") e login.php (formulario simple e código php que recoñece os datos) -> FALTA PROBAR QUE FUNCIONA
