@@ -4,6 +4,8 @@
 2. En cada unha das táboas decídense os campos (columnas) a cubrir, no caso de "persoas" son unha aproximación aos campos que se corresponderían cos do formulario de entrada da app.
 3. Dentro da táboa "usuarios" créanse 3 entradas (tamén mediante phpmyadmin), que representan posibles traballadores do SOL con acceso á aplicación.
 4. Antes de nada, é necesario instalar algúns paquetes no proxecto: npm, bootstrap, parcel e popper, para obter ditas dependencias de funcionalidade.
+   - Coma sempre, facemos un .gitignore para non subir ao repositorio os arquivos innecesarios.
 5. Unha vez iniciada esta base de datos, comezamos a construir o esquelete da app:
-- Primeiro é imprescindible un php de conexión coa base de datos "obra", seguido dun formulario de login onde se identifican os usuarios e iníciase a sesión.
+   - Primeiro é imprescindible un php de conexión coa base de datos "obra", seguido dun formulario de login onde se identifican os usuarios e iníciase a sesión.
+   - Se o login funciona cos usuarios creados, obtemos unha pantalla na que podemos incluir novas "persoas" cun formularios no que os campos a cubrir corresponden coas columnas da      táboa "persoas".
 6. 
