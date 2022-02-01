@@ -1,5 +1,5 @@
 <?php
-	require '../conexion.php';
+	require 'conexion.php';
 	
 	$where = "";
 	
@@ -20,7 +20,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.css" rel="stylesheet">
+	<!-- <link href="../css/bootstrap-theme.css" rel="stylesheet"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="../js/bootstrap.min.js"></script>
 </head>
@@ -29,7 +29,7 @@
 
 	<div class="container">
 		<div class="row">
-			<h2 style="text-align:center">Demo de empresas</h2>
+			<h2 style="text-align:center">Empresas</h2>
 		</div>
 
 		<div class="row">

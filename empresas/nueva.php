@@ -8,8 +8,8 @@
 				<h3 style="text-align:center">NOVA EMPRESA</h3>
 			</div>
 			
-			<form class="form-horizontal" method="POST" action="guardada.php" autocomplete="off">
-                
+			<form class="form-horizontal" method="POST" action="guardar.php" autocomplete="off">
+
 				<div class="form-group">
 					<label for="nome" class="col-sm-2 control-label">Nome:</label>
 					<div class="col-sm-10">
@@ -20,14 +20,14 @@
 				<div class="form-group">
 					<label for="poboacion" class="col-sm-2 control-label">Poboación:</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="nombre" name="poboacion" placeholder="Poboacion" required>
+						<input type="text" class="form-control" id="poboacion" name="poboacion" placeholder="Poboacion" required>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="actividade" class="col-sm-2 control-label">Actividade:</label>
 					<div class="col-sm-10">
-						<input type="text" class="form-control" id="nombre" name="actividade" placeholder="Actividade" required>
+						<input type="text" class="form-control" id="actividade" name="actividade" placeholder="Actividade" required>
 					</div>
 				</div>
 				
