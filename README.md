@@ -18,3 +18,7 @@
    - **Nota**: agora mesmo a función de gardar saca un erro que se está a solventar.
 
 8. Noutra rama do proxecto fíxose un engadido no arquivo nuevo.php para incluir un apartado de LOPD (subindo un pdf á base).
+
+## Uso de Git e Github
+
+Elaborouse un repositorio común cunha rama "master" principal e diversas ramas fillas con engadidos de diferentes persoas do equipo de programación, co obxectivo de non interferir co traballo individual pero ao mesmo tempo poder ver o progreso dos compañeiros e rescatar os elementos necesarios en cada momento da elaboración das distintas carpetas ou funcionalidades.
