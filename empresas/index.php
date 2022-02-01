@@ -1,65 +1,39 @@
 <?php
-require 'conexion.php';
-
-$where = "";
-
-if (!empty($_POST)) {
-	$valor = $_POST['campo'];
-	if (!empty($valor)) {
-		$where = "WHERE nome LIKE '%$valor'";
+	require '../conexion.php';
+	
+	$where = "";
+	
+	if(!empty($_POST))
+	{
+		$valor = $_POST['campo'];
+		if(!empty($valor)){
+			$where = "WHERE nome LIKE '%$valor'";
+		}
 	}
-}
-$sql = "SELECT * FROM persoas $where";
-$resultado = $mysqli->query($sql);
-
+	$sql = "SELECT * FROM empresas $where";
+	$resultado = $mysqli->query($sql);
+	
 ?>
+
 <html lang="gl">
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link href="datatables/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-	<script src="datatables/datatables/js/jquery.dataTables.min.js"></script>
-	<link href="datatables/datatables/img">
-	<!-- <script src="datatables/datatables/js/jquery-3.6.0.min.js"></script> -->
-	<script src="js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('#mitabla').DataTable({
-				"order": [
-					[1, "asc"]
-				],
-				"language": {
-					"lengthMenu": "Mostrar _MENU_ registros por pagina",
-					"info": "Mostrando pagina _PAGE_ de _PAGES_",
-					"infoEmpty": "No hay registros disponibles",
-					"infoFiltered": "(filtrada de _MAX_ registros)",
-					"loadingRecords": "Cargando...",
-					"processing": "Procesando...",
-					"search": "Buscar:",
-					"zeroRecords": "No se encontraron registros coincidentes",
-					"paginate": {
-						"next": "Siguiente",
-						"previous": "Anterior"
-					},
-				}
-			});
-		});
-	</script>
-
+	<script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
 	<div class="container">
 		<div class="row">
-			<h2 style="text-align:center">Demo de rexistro</h2>
+			<h2 style="text-align:center">Demo de empresas</h2>
 		</div>
 
 		<div class="row">
-			<a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a>
+			<a href="nueva.php" class="btn btn-primary">Nova Empresa</a>
 
 			<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
 				<b>Nome: </b><input type="text" id="campo" name="campo" />
@@ -70,19 +44,16 @@ $resultado = $mysqli->query($sql);
 		<br>
 
 		<div class="row table-responsive">
-			<table class="display" id="mitabla">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>Nombre</th>
-						<th>Primeiro Apelido</th>
-						<th>Segundo Apelido</th>
-						<th>NIF</th>
-						<th>Data de nacemento</th>
-						<th>Sexo</th>
-						<th>Código postal</th>
-						<th>Teléfono</th>
-						<th>Email</th>
+						<th>Nome</th>
+						<th>Poboación</th>
+						<th>Actividade</th>
+						<th>Data de alta</th>
+						<th>Ofertas de Emprego</th>
+						<th>Ofertas de Formación</th>
 					</tr>
 				</thead>
 
@@ -91,14 +62,11 @@ $resultado = $mysqli->query($sql);
 						<tr>
 							<td><?php echo $row['id']; ?></td>
 							<td><?php echo $row['nome']; ?></td>
-							<td><?php echo $row['primeiro_apelido']; ?></td>
-							<td><?php echo $row['segundo_apelido']; ?></td>
-							<td><?php echo $row['nif']; ?></td>
-							<td><?php echo $row['data_nacemento']; ?></td>
-							<td><?php echo $row['sexo']; ?></td>
-							<td><?php echo $row['codigo_postal']; ?></td>
-							<td><?php echo $row['telefono']; ?></td>
-							<td><?php echo $row['email']; ?></td>
+							<td><?php echo $row['poboacion']; ?></td>
+							<td><?php echo $row['actividade']; ?></td>
+							<td><?php echo $row['data_alta']; ?></td>
+							<td><?php echo $row['ofertas_emprego']; ?></td>
+							<td><?php echo $row['ofertas_formacion']; ?></td>
 							<td><a href="modificar.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pencil-alt"></i></a></td>
 							<td><a href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash-alt"></i></a></td>
 						</tr>

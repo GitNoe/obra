@@ -17,7 +17,8 @@ if (isset($_SESSION["usuario"])) {
         <?php echo '<h4>Benvido ' .$_SESSION["usuario"].'</h4>'; ?>
     </h2>
     <a href="salir.php">Saír a Login</a><br><br>
-    <a href="../index.php">Ir a Index</a>
+    <a href="../index.php">Ir a Rexistro de Persoas</a><br><br>
+    <a href="../empresas/index.php">Ir a Rexistro de Empresas</a>
     
 </body>
 </html>
