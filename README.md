@@ -13,3 +13,8 @@
    - Se o futuro login funciona cos usuarios creados, obtemos unha pantalla na que podemos incluir novas "persoas" cun formulario no que os campos a cubrir corresponden coas columnas da táboa "persoas" (nuevo.php).
    - Ademais, créanse os respetivos arquivos php coas funcións de gardar, modificar, eliminar e actualizar rexistros de persoas, adaptados sempre aos campos da táboa.
 6. En canto ao login inicial polo que acceden os usuarios (traballadores de SOL), fíxose mediante a creación de dous arquivos: conexion.php (á base de datos "obra") e login.php (formulario simple e código php que recoñece os datos). Tamén hai un salir.php que devólvenos ao login e un inicio.php de proba para confirmar a funcionalidade desta entrada de datos.
+7. Na carpeta empresas atópanse os arquivos para a visualización da táboa do mesmo nome e a opción de facer un novo rexistro coma en persoas.
+
+   - **Nota**: agora mesmo a función de gardar saca un erro que se está a solventar.
+
+8. Noutra rama do proxecto fíxose un engadido no arquivo nuevo.php para incluir un apartado de LOPD (subindo un pdf á base).
