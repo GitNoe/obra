@@ -1,8 +1,36 @@
 <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">	</head>
-	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="./css/modificar-nuevo.css">
 	<body>
+		<!-- MENU SUPERIOR -->
+
+		<header class='main-body-menu-bar'>
+
+<div class='menu-bar-button'>
+	<button class='menu-bar-close-button'><i class="far fa-user"></i></button>
+
+
+</div>
+
+<div class='menu-bar-navigation-links'>
+	<a class='menu-bar-navigation-link link-1' href='#'>Inicio </a>
+	<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
+	<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
+	<a class='menu-bar-navigation-link link-4' href='#'>Empresas </a>
+	<a class='menu-bar-navigation-link link-5' href='#'>Saír </a>
+
+</div>
+
+<div class='menu-bar-input'>
+	<!-- <input class='menu-bar-search-field' placeholder='Buscar'> -->
+	<input type="text" placeholder="Buscar..." name="search">
+	<i class="fas fa-search"></i>
+
+</div>
+
+</header>
 		<div class="container">
 			<div class="row">
 				<h3 style="text-align:center">NOVO REXISTRO</h3>
@@ -15,21 +43,18 @@
 						<input type="text" class="form-control" id="nombre" name="nome" placeholder="Nome" required>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="primeiro_apelido" class="col-sm-2 control-label">Primeiro Apelido:</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="nombre" name="primeiro_apelido" placeholder="Primeiro Apelido" required>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="segundo_apelido" class="col-sm-2 control-label">Segundo Apelido:</label>
 					<div class="col-sm-10">
 						<input type="text" class="form-control" id="nombre" name="segundo_apelido" placeholder="Segundo Apelido" required>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="nif" class="col-sm-2 control-label">DNI / NIF:</label>
 					<div class="col-sm-10">
@@ -43,18 +68,16 @@
 						<input type="date" class="form-control" id="email" name="data_nacemento" placeholder="dd-mm-aa" required>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="sexo" class="col-sm-2 control-label">Sexo:</label>
 					<div class="col-sm-10">
 						<select class="form-control" id="estado_civil" name="sexo">
 							<option value="HOME">HOME</option>
 							<option value="MULLER">MULLER</option>
-							<option value="NON DEFINIDO">NON DEFINIDO</option>
+							<option value="OUTRO">OUTRO</option>
 						</select>
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="codigo_postal" class="col-sm-2 control-label">Código postal:</label>
 					<div class="col-sm-10">
@@ -68,7 +91,6 @@
 						<input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
 					</div>
 				</div>
-
 				<div class="form-group">
 					<label for="email" class="col-sm-2 control-label">Correo electrónico:</label>
 					<div class="col-sm-10">
@@ -76,14 +98,28 @@
 					</div>
 				</div>
 				
-				
+				<br>
+				<br>
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<a href="index.php" class="btn btn-default">Voltar</a>
-						<button type="submit" class="btn btn-primary">Gardar</button>
+						<a href="index.php" class="btn btn-default">VOLTAR</a>
+						<button type="submit" class="btn btn-primary">GARDAR</button>
 					</div>
 				</div>
 			</form>
 		</div>
-	</body>
+		<!-- FOOTER -->
+
+	
+
+		<div class="footer">
+		<p>© Servicio de Orientación laboral</p>
+		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="img/portal.png"></a>
+		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="img/zimbra.png"></a>
+		<a href="https://hoxe.vigo.org/"><img class="conce" src="img/conceemprego2.png"></a>
+	</div>
+
+
+	<!-- FOOTER -->
+		</body>
 </html>

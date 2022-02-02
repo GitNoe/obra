@@ -20,57 +20,62 @@ $resultado = $mysqli->query($sql);
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link href="datatables/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
-	<script src="datatables/datatables/js/jquery.dataTables.min.js"></script>
-	<link href="datatables/datatables/img">
-	<!-- <script src="datatables/datatables/js/jquery-3.6.0.min.js"></script> -->
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('#mitabla').DataTable({
-				"order": [
-					[1, "asc"]
-				],
-				"language": {
-					"lengthMenu": "Mostrar _MENU_ registros por pagina",
-					"info": "Mostrando pagina _PAGE_ de _PAGES_",
-					"infoEmpty": "No hay registros disponibles",
-					"infoFiltered": "(filtrada de _MAX_ registros)",
-					"loadingRecords": "Cargando...",
-					"processing": "Procesando...",
-					"search": "Buscar:",
-					"zeroRecords": "No se encontraron registros coincidentes",
-					"paginate": {
-						"next": "Siguiente",
-						"previous": "Anterior"
-					},
-				}
-			});
-		});
-	</script>
 
 </head>
 
 <body>
+	<!-- MENU SUPERIOR -->
+
+	<header class='main-body-menu-bar' id="top">
+
+		<div class='menu-bar-button'>
+			<button class='menu-bar-close-button'><i class="far fa-user"></i></button>
+
+
+		</div>
+
+		<div class='menu-bar-navigation-links'>
+			<a class='menu-bar-navigation-link link-1' href='#'>Inicio </a>
+			<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
+			<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
+			<a class='menu-bar-navigation-link link-4' href='#'>Empresas </a>
+			<a class='menu-bar-navigation-link link-5' href='#'>Saír </a>
+
+		</div>
+
+		<div class='menu-bar-input'>
+			<!-- <input class='menu-bar-search-field' placeholder='Buscar'> -->
+			<input type="text" placeholder="Buscar..." name="search">
+			<i class="fas fa-search"></i>
+
+		</div>
+
+	</header>
+<!-- MAIN -->
 
 	<div class="container">
-		<div class="row">
+		<div class="row1">
 			<h2 style="text-align:center">Persoas</h2>
 		</div>
 
-		<div class="row">
-			<a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a>
+		<div class="row2">
+			<div> <a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
 
-			<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-				<b>Nome: </b><input type="text" id="campo" name="campo" />
-				<input type="submit" id="enviar" name="enviar" value="Buscar" class="btn btn-info" />
-			</form>
+			<div class="busca-persoas">
+				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+					<b>Nome: </b><input type="text" id="campo" name="campo" />
+					<input type="submit" id="enviar" name="enviar" value="Buscar" class="btn btn-info" />
+				</form>
+			</div>
 		</div>
 
 		<br>
 
 		<div class="row table-responsive">
-			<table class="display" id="mitabla">
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>ID</th>
@@ -129,6 +134,25 @@ $resultado = $mysqli->query($sql);
 			</div>
 		</div>
 	</div>
+
+	<!-- <button id="myBtn"><a href="#top" style="color: white; text-decoration: none";><i class="fas fa-chevron-up"></i></a></button> -->
+	<div id="myBtn"><a href="#top" ;><i class="fas fa-chevron-up"></i></a></div> 
+	<!-- FOOTER -->
+
+	
+
+	<div class="footer">
+		<p>© Servicio de Orientación laboral</p>
+		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="img/portal.png"></a>
+		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="img/zimbra.png"></a>
+		<a href="https://hoxe.vigo.org/"><img class="conce" src="img/conceemprego2.png"></a>
+	</div>
+
+	
+
+	
+
+
 
 	<script>
 		$('#confirm-delete').on('show.bs.modal', function(e) {

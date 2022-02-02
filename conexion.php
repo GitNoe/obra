@@ -5,5 +5,4 @@
 		
 		die('Error en la conexion' . $mysqli->connect_error);	
 	}
-
 ?>
