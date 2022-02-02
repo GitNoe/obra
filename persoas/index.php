@@ -38,11 +38,11 @@ $resultado = $mysqli->query($sql);
 		</div>
 
 		<div class='menu-bar-navigation-links'>
-			<a class='menu-bar-navigation-link link-1' href='#'>Inicio </a>
+			<a class='menu-bar-navigation-link link-1' href='../index.php'>Inicio </a>
 			<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
 			<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
 			<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>Empresas </a>
-			<a class='menu-bar-navigation-link link-5' href='#'>Saír </a>
+			<a class='menu-bar-navigation-link link-5' href='../logout.php'>Saír </a>
 
 		</div>
 

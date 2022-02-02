@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Login de Usuario</title>
 </head>
@@ -24,6 +24,9 @@ if($_POST){
     session_start();
     require 'conexion-login.php';
 
+    $_SESSION['usuario'] = "miusuario";
+    $_SESSION['estado'] = "conectado";
+
     $nome = $_POST['nome'];
     $clave = $_POST['clave'];
 
@@ -36,7 +39,7 @@ if($_POST){
     
     if($usuario){
         $_SESSION["usuario"] = $usuario["nome"];
-        header("location:../index.php");
+        header("location:index.php");
     } else {
         echo "Nome ou clave non válido";
     }
