@@ -36,7 +36,7 @@ if($_POST){
     
     if($usuario){
         $_SESSION["usuario"] = $usuario["nome"];
-        header("location:inicio.php");
+        header("location:../index.php");
     } else {
         echo "Nome ou clave non válido";
     }

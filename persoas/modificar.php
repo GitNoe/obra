@@ -13,12 +13,12 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 <head>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.css" rel="stylesheet">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="./css/modificar-nuevo.css">
-	<script src="/js/jquery-3.6.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="../css/modificar-nuevo.css">
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -36,7 +36,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 			<a class='menu-bar-navigation-link link-1' href='#'>Inicio </a>
 			<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
 			<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
-			<a class='menu-bar-navigation-link link-4' href='#'>Empresas </a>
+			<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>Empresas </a>
 			<a class='menu-bar-navigation-link link-5' href='#'>Saír </a>
 
 		</div>
@@ -138,9 +138,9 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
 	<div class="footer">
 		<p>© Servicio de Orientación laboral</p>
-		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="img/portal.png"></a>
-		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="img/zimbra.png"></a>
-		<a href="https://hoxe.vigo.org/"><img class="conce" src="img/conceemprego2.png"></a>
+		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="../img/portal.png"></a>
+		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="../img/zimbra.png"></a>
+		<a href="https://hoxe.vigo.org/"><img class="conce" src="../img/conceemprego2.png"></a>
 	</div>
 
 	<!-- FOOTER -->

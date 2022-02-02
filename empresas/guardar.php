@@ -14,14 +14,16 @@
 	
 ?>
 
+<!DOCTYPE html>
 <html lang="gl">
 	<head>
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="../css/bootstrap.min.css" rel="stylesheet">
-		<!-- <link href="../css/bootstrap-theme.css" rel="stylesheet"> -->
-        <script src="../js/jquery-3.6.0.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../css/bootstrap-theme.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../css/guardar-eliminar-update.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 	</head>
 	
 	<body>
@@ -30,7 +32,7 @@
 				<div class="row" style="text-align:center">
 					<?php if($resultado) { ?>
 						<h3>REXISTRO GARDADO</h3>
-						<?php } else { ?>
+					<?php } else { ?>
 						<h3>ERRO AO GARDAR</h3>
 					<?php } ?>
 					

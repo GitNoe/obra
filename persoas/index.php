@@ -9,11 +9,10 @@ if (!empty($_POST)) {
 		$where = "WHERE nome LIKE '%$valor'";
 	}
 }
-$sql = "SELECT * FROM empresas $where";
+$sql = "SELECT * FROM persoas $where";
 $resultado = $mysqli->query($sql);
 
 ?>
-
 <html lang="gl">
 
 <head>
@@ -24,10 +23,10 @@ $resultado = $mysqli->query($sql);
 	<link rel="stylesheet" href="../css/index.css">
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
-
 	<!-- MENU SUPERIOR -->
 
 	<header class='main-body-menu-bar' id="top">
@@ -41,8 +40,8 @@ $resultado = $mysqli->query($sql);
 		<div class='menu-bar-navigation-links'>
 			<a class='menu-bar-navigation-link link-1' href='#'>Inicio </a>
 			<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
-			<a class='menu-bar-navigation-link link-3' href='../persoas/index.php'>Persoas </a>
-			<a class='menu-bar-navigation-link link-4' href='index.php'>Empresas </a>
+			<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
+			<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>Empresas </a>
 			<a class='menu-bar-navigation-link link-5' href='#'>Saír </a>
 
 		</div>
@@ -55,14 +54,15 @@ $resultado = $mysqli->query($sql);
 		</div>
 
 	</header>
-	<!-- MAIN -->
+<!-- MAIN -->
+
 	<div class="container">
 		<div class="row1">
-			<h2 style="text-align:center">Empresas</h2>
+			<h2 style="text-align:center">Persoas</h2>
 		</div>
 
 		<div class="row2">
-			<a href="nueva.php" class="btn btn-primary">Nova Empresa</a>
+			<div> <a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
 
 			<div class="busca-persoas">
 				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -79,12 +79,15 @@ $resultado = $mysqli->query($sql);
 				<thead>
 					<tr>
 						<th>ID</th>
-						<th>Nome</th>
-						<th>Poboación</th>
-						<th>Actividade</th>
-						<th>Data de alta</th>
-						<th>Ofertas de Emprego</th>
-						<th>Ofertas de Formación</th>
+						<th>Nombre</th>
+						<th>Primeiro Apelido</th>
+						<th>Segundo Apelido</th>
+						<th>NIF</th>
+						<th>Data de nacemento</th>
+						<th>Sexo</th>
+						<th>Código postal</th>
+						<th>Teléfono</th>
+						<th>Email</th>
 					</tr>
 				</thead>
 
@@ -93,11 +96,14 @@ $resultado = $mysqli->query($sql);
 						<tr>
 							<td><?php echo $row['id']; ?></td>
 							<td><?php echo $row['nome']; ?></td>
-							<td><?php echo $row['poboacion']; ?></td>
-							<td><?php echo $row['actividade']; ?></td>
-							<td><?php echo $row['data_alta']; ?></td>
-							<td><?php echo $row['ofertas_emprego']; ?></td>
-							<td><?php echo $row['ofertas_formacion']; ?></td>
+							<td><?php echo $row['primeiro_apelido']; ?></td>
+							<td><?php echo $row['segundo_apelido']; ?></td>
+							<td><?php echo $row['nif']; ?></td>
+							<td><?php echo $row['data_nacemento']; ?></td>
+							<td><?php echo $row['sexo']; ?></td>
+							<td><?php echo $row['codigo_postal']; ?></td>
+							<td><?php echo $row['telefono']; ?></td>
+							<td><?php echo $row['email']; ?></td>
 							<td><a href="modificar.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pencil-alt"></i></a></td>
 							<td><a href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash-alt"></i></a></td>
 						</tr>
@@ -133,12 +139,15 @@ $resultado = $mysqli->query($sql);
 	<div id="myBtn"><a href="#top" ;><i class="fas fa-chevron-up"></i></a></div> 
 	<!-- FOOTER -->
 
+	
+
 	<div class="footer">
 		<p>© Servicio de Orientación laboral</p>
 		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="../img/portal.png"></a>
 		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="../img/zimbra.png"></a>
 		<a href="https://hoxe.vigo.org/"><img class="conce" src="../img/conceemprego2.png"></a>
 	</div>
+	
 
 	<script>
 		$('#confirm-delete').on('show.bs.modal', function(e) {

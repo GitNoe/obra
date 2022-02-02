@@ -18,6 +18,8 @@
    - **Nota**: agora mesmo a función de gardar saca un erro que se está a solventar.
 
 8. Noutra rama do proxecto fíxose un engadido no arquivo nuevo.php para incluir un apartado de LOPD (subindo un pdf á base).
+9. Engadiuse o traballo do equipo de deseño sobre o apartado de persoas, deste modo temos a páxina estilada con header e menú, footer e un layout completo de aplicación.
+10. Reestructurouse a árbore de directorios para unha mellor organización de carpetas e fíxose un index principal na base do proxecto.
 
 ## Uso de Git e Github
 
