@@ -1,2 +1,5 @@
 .cache
 /css
+/js/*
+!js/footer.js
+!js/header.js
