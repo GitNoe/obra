@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 01-02-2022 a las 12:32:11
+-- Tiempo de generación: 03-02-2022 a las 08:37:10
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.27
 
@@ -24,40 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `empresas`
+-- Estructura de tabla para la tabla `citas`
 --
 
-CREATE TABLE `empresas` (
-  `id` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL,
-  `poboacion` varchar(50) NOT NULL,
-  `actividade` varchar(200) NOT NULL,
-  `data_alta` date NOT NULL,
-  `ofertas_emprego` int(11) NOT NULL,
-  `ofertas_formación` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `citas` (
+  `data` date NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `horain` time(6) NOT NULL,
+  `horaout` time(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Índices para tablas volcadas
+-- Volcado de datos para la tabla `citas`
 --
 
---
--- Indices de la tabla `empresas`
---
-ALTER TABLE `empresas`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `nome` (`nome`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `empresas`
---
-ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+INSERT INTO `citas` (`data`, `nome`, `horain`, `horaout`) VALUES
+('2022-02-10', 'Xabi', '12:21:00.000000', '12:31:00.000000'),
+('2022-02-03', 'Yan', '13:31:00.000000', '12:39:00.000000');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

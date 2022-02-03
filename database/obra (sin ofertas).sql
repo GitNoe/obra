@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 02-02-2022 a las 07:26:45
+-- Tiempo de generación: 03-02-2022 a las 07:36:10
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.27
 
@@ -31,41 +31,18 @@ CREATE TABLE `empresas` (
   `id` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `poboacion` varchar(50) NOT NULL,
-  `actividade` varchar(200) NOT NULL,
-  `data_alta` date NOT NULL,
-  `ofertas_emprego` int(11) NOT NULL,
-  `ofertas_formación` int(11) NOT NULL
+  `actividade` varchar(50) NOT NULL,
+  `data_incorporacion` date NOT NULL,
+  `ofertas_contratacion` int(11) NOT NULL,
+  `ofertas_formacion` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `ofertas_emprego`
+-- Volcado de datos para la tabla `empresas`
 --
 
-CREATE TABLE `ofertas_emprego` (
-  `id` int(11) NOT NULL,
-  `id_empresa` int(11) NOT NULL,
-  `nome_empresa` varchar(50) NOT NULL,
-  `posto` varchar(50) NOT NULL,
-  `numero_postos` int(11) NOT NULL,
-  `data_oferta` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `ofertas_formacion`
---
-
-CREATE TABLE `ofertas_formacion` (
-  `id` int(11) NOT NULL,
-  `id_empresa` int(11) NOT NULL,
-  `nome_empresa` varchar(50) NOT NULL,
-  `posto` varchar(50) NOT NULL,
-  `numero_postos` int(11) NOT NULL,
-  `data_oferta` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+INSERT INTO `empresas` (`id`, `nome`, `poboacion`, `actividade`, `data_incorporacion`, `ofertas_contratacion`, `ofertas_formacion`) VALUES
+(1, 'asd', 'dfg', 'ythgdf', '2022-02-03', 65, 54);
 
 -- --------------------------------------------------------
 
@@ -91,7 +68,8 @@ CREATE TABLE `persoas` (
 --
 
 INSERT INTO `persoas` (`id`, `nome`, `primeiro_apelido`, `segundo_apelido`, `nif`, `data_nacemento`, `sexo`, `codigo_postal`, `telefono`, `email`) VALUES
-(1, 'MarÃ­a', 'PÃ©rez', 'Bellas', '12345678S', '1987-04-30', 'MULLER', 36799, 123498765, 'mariapb@gmail.com');
+(1, 'MarÃ­a', 'PÃ©rez', 'Bellas', '12345678S', '1987-04-30', 'MULLER', 36799, 123498765, 'mariapb@gmail.com'),
+(2, 'noelia', 'uno', 'dos', '23456788', '2021-03-30', 'MULLER', 23456, 123456789, 'nksdvjn@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -122,25 +100,7 @@ INSERT INTO `usuarios` (`id`, `nome`, `clave`) VALUES
 -- Indices de la tabla `empresas`
 --
 ALTER TABLE `empresas`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id` (`id`),
-  ADD KEY `nome` (`nome`);
-
---
--- Indices de la tabla `ofertas_emprego`
---
-ALTER TABLE `ofertas_emprego`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_empresa` (`id_empresa`),
-  ADD KEY `nome_empresa` (`nome_empresa`);
-
---
--- Indices de la tabla `ofertas_formacion`
---
-ALTER TABLE `ofertas_formacion`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_empresa` (`id_empresa`),
-  ADD KEY `nome_empresa` (`nome_empresa`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `persoas`
@@ -162,49 +122,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `ofertas_emprego`
---
-ALTER TABLE `ofertas_emprego`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `ofertas_formacion`
---
-ALTER TABLE `ofertas_formacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `persoas`
 --
 ALTER TABLE `persoas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `ofertas_emprego`
---
-ALTER TABLE `ofertas_emprego`
-  ADD CONSTRAINT `ofertas_emprego_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresas` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ofertas_emprego_ibfk_2` FOREIGN KEY (`nome_empresa`) REFERENCES `empresas` (`nome`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `ofertas_formacion`
---
-ALTER TABLE `ofertas_formacion`
-  ADD CONSTRAINT `ofertas_formacion_ibfk_1` FOREIGN KEY (`id_empresa`) REFERENCES `empresas` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `ofertas_formacion_ibfk_2` FOREIGN KEY (`nome_empresa`) REFERENCES `empresas` (`nome`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

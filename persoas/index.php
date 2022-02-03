@@ -20,40 +20,19 @@ $resultado = $mysqli->query($sql);
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css-obra/index-persoas.css">
 	<script src="../js/jquery-3.6.0.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/header.js"></script>
+	<script src="../js/footer.js"></script>
 
 </head>
 
 <body>
 	<!-- MENU SUPERIOR -->
 
-	<header class='main-body-menu-bar' id="top">
+	<header-component></header-component>
 
-		<div class='menu-bar-button'>
-			<button class='menu-bar-close-button'><i class="far fa-user"></i></button>
-
-
-		</div>
-
-		<div class='menu-bar-navigation-links'>
-			<a class='menu-bar-navigation-link link-1' href='../index.php'>Inicio </a>
-			<a class='menu-bar-navigation-link link-2' href='#'>Citas </a>
-			<a class='menu-bar-navigation-link link-3' href='index.php'>Persoas </a>
-			<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>Empresas </a>
-			<a class='menu-bar-navigation-link link-5' href='../logout.php'>Saír </a>
-
-		</div>
-
-		<div class='menu-bar-input'>
-			<!-- <input class='menu-bar-search-field' placeholder='Buscar'> -->
-			<input type="text" placeholder="Buscar..." name="search">
-			<i class="fas fa-search"></i>
-
-		</div>
-
-	</header>
 <!-- MAIN -->
 
 	<div class="container">
@@ -62,7 +41,7 @@ $resultado = $mysqli->query($sql);
 		</div>
 
 		<div class="row2">
-			<div> <a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
+			<div> <a href="./nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
 
 			<div class="busca-persoas">
 				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -137,17 +116,14 @@ $resultado = $mysqli->query($sql);
 
 	<!-- <button id="myBtn"><a href="#top" style="color: white; text-decoration: none";><i class="fas fa-chevron-up"></i></a></button> -->
 	<div id="myBtn"><a href="#top" ;><i class="fas fa-chevron-up"></i></a></div> 
+
+	<!-- FOOTER -->
+		<footer-component></footer-component>
 	<!-- FOOTER -->
 
 	
 
-	<div class="footer">
-		<p>© Servicio de Orientación laboral</p>
-		<a href="https://sede.vigo.org/portal-empregado/#/gestionLogin"><img class="portal" src="../img/portal.png"></a>
-		<a href="https://correo.vigo.org/zimbra/"><img class="zimbra" src="../img/zimbra.png"></a>
-		<a href="https://hoxe.vigo.org/"><img class="conce" src="../img/conceemprego2.png"></a>
-	</div>
-	
+
 
 	<script>
 		$('#confirm-delete').on('show.bs.modal', function(e) {
