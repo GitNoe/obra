@@ -5,10 +5,9 @@ footerTemplate.innerHTML = `
   .footer {
     background-color: #424242;
     text-align: center;
-    /* bottom: 0; */
-    margin-top: 13%;
+    margin-top: 10%;
     position: relative;
-    min-height: 120px; 
+    min-height: 130px; 
     
   }
   

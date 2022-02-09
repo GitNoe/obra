@@ -1,6 +1,7 @@
 <?php
 	
 	require 'conexion.php';
+	// require 'index.php';
 
 	$id = $_GET['id'];
 	

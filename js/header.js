@@ -107,6 +107,8 @@ body{
 .menu-bar-search-field::placeholder {
 
 	padding-left: .75rem;
+	
+	
 }
 
 .fa-search {
@@ -271,24 +273,24 @@ body{
         <header class='main-body-menu-bar' id="top">
 
         <div class='menu-bar-button'>
-          <button class='menu-bar-close-button'><i class="far fa-user"></i></button>
+          <button class='menu-bar-close-button'><i class="far fa-user fa-lg"></i></button>
     
     
         </div>
     
 		<div class='menu-bar-navigation-links'>
-		<a class='menu-bar-navigation-link link-1' href='../index.php'>Inicio </a>
-		<a class='menu-bar-navigation-link link-2' href='../citas/citas.php'>Citas </a>
-		<a class='menu-bar-navigation-link link-3' href='../persoas/index.php'>Persoas </a>
-		<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>Empresas </a>
-		<a class='menu-bar-navigation-link link-5' href='../login/logout.php'>Saír </a>
+		<a class='menu-bar-navigation-link link-1' href='../index.php'>INICIO </a>
+		<a class='menu-bar-navigation-link link-2' href='../citas/citas.php'>CITAS </a>
+		<a class='menu-bar-navigation-link link-3' href='../persoas/index.php'>PERSOAS </a>
+		<a class='menu-bar-navigation-link link-4' href='../empresas/index.php'>EMPRESAS </a>
+		<a class='menu-bar-navigation-link link-5' href='../login/logout.php'>SAÍR </a>
 
 	  </div>
     
         <div class='menu-bar-input'>
           <!-- <input class='menu-bar-search-field' placeholder='Buscar'> -->
           <input type="text" placeholder="Buscar..." name="search">
-          <i class="fas fa-search"></i>
+          <i class="fas fa-search fa-lg"></i>
     
         </div>
     

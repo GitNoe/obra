@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>GFG- Store Data</title>
+    <title>Gardar datos</title>
 </head>
 
-<body>
+<body onload="redirixe()">
     <?php
 
     $conn = mysqli_connect("localhost", "root", "Usqpj=Z$", "obra");
@@ -25,17 +25,21 @@
             '$nome','$horain','$horaout')";
 
     if (mysqli_query($conn, $sql)) {
-        echo "<h3>data stored in a database successfully."
-            . " Please browse your localhost php my admin"
-            . " to view the updated data</h3>";
+        echo '<script type="text/javascript">',
+        'redirixe();',
+        '</script>';
 
         echo nl2br("\n$data\n $nome\n "
             . "$horain\n $horaout\n");
     } else {
-        echo "ERROR: Hush! Sorry $sql. "
+        echo "ERRO $sql. "
             . mysqli_error($conn);
     }
     ?>
-    <h1>Storing Form data in Database</h1>
-
+    <h1>Gardando datos</h1>
+    <script defer>
+        function redirixe() {
+            location.replace("../index.php")
+        }
+    </script>
     <form action="insert.php" method="post">

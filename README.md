@@ -26,6 +26,8 @@
 14. Púxose en común o código de programación e o de deseño do login, persoas e empresas. Modificáronse diversos arquivos para a súa mellora e a óptima referenciación de rutas absolutas.
 15. Falta o deseño do index.php principal e dos arquivos da carpeta citas.
 16. No login hai unha opción de recuperar contrasinal que de momento non é funcional (e non leva a ningures).
+17. **ACTU 04/02**: a opción de eliminar (persoas, empresas...) debe sacar en pantalla un aviso de confirmación, no que se prememos "borrar" confírmase e realízase a acción. Agora mesmo ese aviso sae ben pero "borrar" saca un erro de php.
+18. **ACTU 09/02**: integración de css paraa index e citas, e revisión do código. Fíxose a presentación a Alberte.
 
 ## Uso de Git e Github
 

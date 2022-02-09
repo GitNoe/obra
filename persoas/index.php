@@ -6,7 +6,7 @@ $where = "";
 if (!empty($_POST)) {
 	$valor = $_POST['campo'];
 	if (!empty($valor)) {
-		$where = "WHERE nome LIKE '%$valor'";
+		$where = "WHERE id, nif LIKE '%".$valor."%'";
 	}
 }
 $sql = "SELECT * FROM persoas $where";
@@ -17,6 +17,8 @@ $resultado = $mysqli->query($sql);
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- avidso delete -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -41,11 +43,11 @@ $resultado = $mysqli->query($sql);
 		</div>
 
 		<div class="row2">
-			<div> <a href="./nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
+			<div> <a href="nuevo.php" class="btn btn-primary">Novo Rexistro</a></div>
 
 			<div class="busca-persoas">
 				<form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
-					<b>Nome: </b><input type="text" id="campo" name="campo" />
+					<b>DNI: </b><input type="text" id="campo" name="campo" />
 					<input type="submit" id="enviar" name="enviar" value="Buscar" class="btn btn-info" />
 				</form>
 			</div>
@@ -84,7 +86,7 @@ $resultado = $mysqli->query($sql);
 							<td><?php echo $row['telefono']; ?></td>
 							<td><?php echo $row['email']; ?></td>
 							<td><a href="modificar.php?id=<?php echo $row['id']; ?>"><i class="fas fa-pencil-alt"></i></a></td>
-							<td><a href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash-alt"></i></a></td>
+							<td><a href="#" data-href="eliminar.php?id=<?php echo $row['id']?>" data-toggle="modal" data-target="#confirm-delete"><i class="fas fa-trash-alt"></i></a></td>
 						</tr>
 					<?php } ?>
 				</tbody>
@@ -93,7 +95,7 @@ $resultado = $mysqli->query($sql);
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" name="confirm-delete" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 
@@ -103,16 +105,24 @@ $resultado = $mysqli->query($sql);
 				</div>
 
 				<div class="modal-body">
-					¿Desea eliminar este registro?
+					<p>Se va a proceder a eliminar por completo este registro</p>
+					<p>¿Desea eliminar este registro?</p>
+					<p class="debug-url"></p>
 				</div>
 
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					<a class="btn btn-danger btn-ok">Delete</a>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+					<a class="btn btn-danger btn-ok" data-href="eliminar.php?id=<?php echo $row['id']?>">Borrar</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<script src="aviso.js"></script>
+	<!-- aviso delete -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 	<!-- <button id="myBtn"><a href="#top" style="color: white; text-decoration: none";><i class="fas fa-chevron-up"></i></a></button> -->
 	<div id="myBtn"><a href="#top" ;><i class="fas fa-chevron-up"></i></a></div> 
@@ -122,17 +132,6 @@ $resultado = $mysqli->query($sql);
 	<!-- FOOTER -->
 
 	
-
-
-
-	<script>
-		$('#confirm-delete').on('show.bs.modal', function(e) {
-			$(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-
-			$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
-		});
-	</script>
-
 </body>
 
 </html>
