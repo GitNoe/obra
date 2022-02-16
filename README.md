@@ -32,3 +32,7 @@
 ## Uso de Git e Github
 
 Elaborouse un repositorio común cunha rama "master" principal e diversas ramas fillas con engadidos de diferentes persoas do equipo de programación, co obxectivo de non interferir co traballo individual pero ao mesmo tempo poder ver o progreso dos compañeiros e rescatar os elementos necesarios en cada momento da elaboración das distintas carpetas ou funcionalidades.
+
+## Nota
+
+Este repositorio non se corresponde co entregado para o exercicio evaluable individual, é unha guía orientativa para axudar á composición da documentación do proxecto.
