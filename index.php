@@ -89,9 +89,9 @@ if ($conn->connect_error) {
         </div>
     </div>
     <script src="js/index.js"></script>
+    
+    <footer-component></footer-component>
+    <script src="../js/footer.js"></script>
 </body>
-
-<footer-component></footer-component>
-<!-- <script src="../js/footer.js"></script> -->
 
 </html>
